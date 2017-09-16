@@ -5,8 +5,8 @@ import {Team} from "../team";
 export class GameService {
 
   private activeTeams: Team[] = [
-    {name: 'Robin'},
-    {name: 'Team A'}
+    {name: 'Andreas W. & Martin Y.'},
+    {name: 'Christina & Max'}
   ];
   private waitingTeams: Team[] = [
     {name: 'TeamB'},
