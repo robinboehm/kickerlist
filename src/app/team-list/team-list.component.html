@@ -1,11 +1,7 @@
 <div class="row-">
   <div class="col">
     <ul>
-      <li>Team C</li>
-      <li>Team D</li>
-      <li>Team E</li>
-      <li>Team F</li>
-      <li>Team Y</li>
+      <li *ngFor="let team of waitingTeams">{{team.name}}</li>
     </ul>
   </div>
 </div>

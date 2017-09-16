@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {Team} from "../team";
 
 @Component({
   selector: 'team-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team-list.component.css']
 })
 export class TeamListComponent implements OnInit {
+
+  @Input() waitingTeams: Team[];
 
   constructor() { }
 
