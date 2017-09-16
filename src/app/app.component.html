@@ -2,7 +2,7 @@
 
   <div class="row">
     <div class="col">
-      <active-teams [activeTeams]="game.activeTeams"></active-teams>
+      <active-teams [activeTeams]="game.activeTeams" (teamWon)="handleTeamWon($event)"></active-teams>
     </div>
   </div>
 
