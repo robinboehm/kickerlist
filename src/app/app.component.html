@@ -6,16 +6,16 @@
     </div>
   </div>
 
-  <div class="row h-75">
+  <div class="row h-75 pt-2">
     <div class="col-6">
       <team-list [waitingTeams]="game.waitingTeams"></team-list>
     </div>
     <div class="col-6 text-center">
-      <div>
+      <div class="p-5">
         <img src="assets/img/50-cent.png" class="img img-fluid">
       </div>
-      <input type="text" [(ngModel)]="name" placeholder="Teamname" class="w-100" style="font-size: 200%">
-      <button (click)="addTeam(name)" class="btn btn-success w-100">Challenge</button>
+      <input type="text" [(ngModel)]="name" placeholder="Team Name" class="w-100" style="font-size: 200%">
+      <button [disabled]="!name.length" (click)="addTeam(name)" class="btn btn-success w-100">Fordern</button>
     </div>
   </div>
 </div>
