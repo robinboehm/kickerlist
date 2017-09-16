@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Team} from "../team";
 
 @Component({
@@ -8,11 +8,16 @@ import {Team} from "../team";
 })
 export class ActiveTeamsComponent implements OnInit {
 
-  @Input() activeTeams: Team[];
+  @Input() activeTeams: Team[] = [];
+  @Output() teamWon: EventEmitter<Team> = new EventEmitter<Team>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  triggerTeamWon(team:Team){
+    this.teamWon.emit(team);
   }
 
 }
