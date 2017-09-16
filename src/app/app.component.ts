@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {GameService} from "./game/game.service";
 
 @Component({
   selector: 'kickertable-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '';
+
+  constructor(public game: GameService){}
+
 }

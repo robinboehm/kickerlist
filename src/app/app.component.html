@@ -2,13 +2,13 @@
 
   <div class="row">
     <div class="col">
-      <active-teams></active-teams>
+      <active-teams [activeTeams]="game.activeTeams"></active-teams>
     </div>
   </div>
 
   <div class="row">
     <div class="col-6">
-      <team-list></team-list>
+      <team-list [waitingTeams]="game.waitingTeams"></team-list>
     </div>
     <div class="col-6">
       <button>Challenge</button>
