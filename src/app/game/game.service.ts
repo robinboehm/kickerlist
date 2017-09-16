@@ -19,4 +19,11 @@ export class GameService {
   constructor() {
   }
 
+  handleTeamWon(team: Team) {
+    for(let i=0;i<this.activeTeams.length;i++){
+      if(this.activeTeams[i] !== team){
+        this.activeTeams[i] = this.waitingTeams.shift();
+      }
+    }
+  }
 }
