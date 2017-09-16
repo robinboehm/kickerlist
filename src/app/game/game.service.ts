@@ -19,6 +19,10 @@ export class GameService {
   constructor() {
   }
 
+  addTeam(name:string){
+    this.waitingTeams.push({name});
+  }
+
   handleTeamWon(team: Team) {
     for(let i=0;i<this.activeTeams.length;i++){
       if(this.activeTeams[i] !== team){

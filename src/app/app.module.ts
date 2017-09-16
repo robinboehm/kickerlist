@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TeamListComponent } from './team-list/team-list.component';
 import { ActiveTeamsComponent } from './active-teams/active-teams.component';
 import {GameService} from "./game/game.service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {GameService} from "./game/game.service";
   imports: [
     BrowserModule,
     AppRoutingModule
+    FormsModule
   ],
   providers: [GameService],
   bootstrap: [AppComponent]

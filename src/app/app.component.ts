@@ -9,10 +9,17 @@ import {Team} from "./team";
 })
 export class AppComponent {
 
+  name: string = ""
+
   constructor(public game: GameService){}
 
   handleTeamWon(team: Team){
     this.game.handleTeamWon(team);
+  }
+
+  addTeam(name:string){
+    this.name = "";
+    this.game.addTeam(name);
   }
 
 }

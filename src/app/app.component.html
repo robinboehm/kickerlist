@@ -11,7 +11,8 @@
       <team-list [waitingTeams]="game.waitingTeams"></team-list>
     </div>
     <div class="col-6">
-      <button>Challenge</button>
+      <input type="text" [(ngModel)]="name" placeholder="Teamname">
+      <button (click)="addTeam(name)">Challenge</button>
     </div>
   </div>
 </div>
