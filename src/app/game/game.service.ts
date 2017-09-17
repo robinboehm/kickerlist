@@ -22,6 +22,11 @@ export class GameService {
     'Mocki & Andreas',
     'Marcel & Sebastian W',
     'Thorsten & Flo',
+    'Moritz & Andre',
+    'Mira & Leo',
+    'Mocki & Andreas',
+    'Marcel & Sebastian W',
+    'Thorsten & Flo',
   ];
 
   constructor() {

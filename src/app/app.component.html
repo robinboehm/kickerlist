@@ -1,14 +1,7 @@
-<div class="container-fluid h-100">
-
-  <div class="row h-10">
-    <div class="col">
-      <active-teams [activeTeams]="game.activeTeams" (teamWon)="handleTeamWon($event)"></active-teams>
-    </div>
-  </div>
-
-  <div class="row h-90 pt-2">
+<main class="pt-5 mt-5 pb-5 mb-5">
+  <div class="row pt-2">
     <div class="col-6">
-      <div class="row h-90">
+      <div class="row">
         <div class="col">
           <team-list [waitingTeams]="game.waitingTeams"></team-list>
         </div>
@@ -21,7 +14,7 @@
                  style="font-size: 200%;text-align:center;">
         </div>
       </div>
-      <div class="row pt-5">
+      <div class="row pt-3">
         <div *ngFor="let teamName of lastTeamNames" class="col-12">
           <button class="btn btn-info w-100" (click)="setName(teamName)">
             <span class="h1">{{teamName}}</span>
@@ -30,7 +23,15 @@
       </div>
     </div>
   </div>
-</div>
+</main>
+
+<header>
+  <div class="row">
+    <div class="col">
+      <active-teams [activeTeams]="game.activeTeams" (teamWon)="handleTeamWon($event)"></active-teams>
+    </div>
+  </div>
+</header>
 
 <footer class="footer">
   <div class="row">
