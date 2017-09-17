@@ -9,25 +9,42 @@ export class GameService {
     {name: 'Christina & Max'}
   ];
   private waitingTeams: Team[] = [
-    {name: 'TeamB'},
-    {name: 'TeamC'},
-    {name: 'TeamD'},
-    {name: 'TeamE'},
-    {name: 'TeamF'},
+    {name: 'Moritz & Andre'},
+    {name: 'Mira & Leo'},
+    {name: 'Mocki & Andreas'},
+    {name: 'Marcel & Sebastian W.'},
+    {name: 'Thorsten & Flo'},
+  ];
+
+  private lastTeamNames: string[] = [
+    'Moritz & Andre',
+    'Mira & Leo',
+    'Mocki & Andreas',
+    'Marcel & Sebastian W',
+    'Thorsten & Flo',
   ];
 
   constructor() {
   }
 
-  addTeam(name:string){
+  addTeam(name: string) {
     this.waitingTeams.push({name});
+
+    // Add name to already quickchoose list
+    if(this.lastTeamNames.indexOf(name)===-1){
+      this.lastTeamNames.unshift(name);
+    }
   }
 
   handleTeamWon(team: Team) {
-    for(let i=0;i<this.activeTeams.length;i++){
-      if(this.activeTeams[i] !== team){
+    for (let i = 0; i < this.activeTeams.length; i++) {
+      if (this.activeTeams[i] !== team) {
         this.activeTeams[i] = this.waitingTeams.shift();
       }
     }
+  }
+
+  getLastTeamNames(){
+    return this.lastTeamNames;
   }
 }
