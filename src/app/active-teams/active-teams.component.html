@@ -3,12 +3,16 @@
     <button class="btn w-100 h-100 btn btn-success" style="font-size: 4vw" (click)="triggerTeamWon(activeTeams[0])">🏆
     </button>
   </div>
-  <div class="row">
-    <div class="border border-dark rounded p-2 col-5" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+  <div class="row mx-auto mr-auto">
+    <div class="p-2 col text-center"
+         style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 100%">
       <span style="font-size: 4vw;">{{activeTeams[0]?.name}}</span>
     </div>
-    <div style="font-size: 4vw" class="text-center col-2 pt-3">🆚</div>
-    <div class="border border-dark rounded p-3 col-5" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+
+    <div style="font-size: 4vw" class="text-center pt-3">🆚</div>
+
+    <div class="p-2 col text-center"
+         style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
       <span style="font-size: 4vw">{{activeTeams[1]?.name}}</span>
     </div>
   </div>
