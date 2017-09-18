@@ -15,4 +15,8 @@ export class TeamListComponent implements OnInit {
   ngOnInit() {
   }
 
+  removeTeam(i:number){
+    this.waitingTeams.splice(i,1);
+  }
+
 }

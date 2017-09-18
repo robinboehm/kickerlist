@@ -1,4 +1,4 @@
-<main class="pt-5 mt-5 pb-5 mb-5">
+<main class="pt-5 mt-5">
   <div class="row pt-2">
     <div class="col-6">
       <div class="row">
@@ -26,22 +26,17 @@
 </main>
 
 <header>
-  <div class="row">
-    <div class="col">
-      <active-teams [activeTeams]="game.activeTeams" (teamWon)="handleTeamWon($event)"></active-teams>
+  <div class="row h-100">
+    <div class="col-6 h-100">
+      <button (click)="nextTeam()" class="btn btn-primary w-100 h-100">
+        <span class="h1 h-100">Weiter</span>
+      </button>
+    </div>
+    <div class="col-6 h-100">
+      <button [disabled]="!name.length" (click)="addTeam(name)" class="btn btn-success w-100 h-100">
+        <span class="h1 h-100">Fordern</span>
+      </button>
     </div>
   </div>
 </header>
 
-<footer class="footer">
-  <div class="row">
-    <div class="col-2 text-center">
-      <img src="assets/img/50-cent.png" height="100" class="img">
-    </div>
-    <div class="col-10">
-      <button [disabled]="!name.length" (click)="addTeam(name)" class="btn btn-success w-100 h-100">
-        <span class="h1">Fordern</span>
-      </button>
-    </div>
-  </div>
-</footer>

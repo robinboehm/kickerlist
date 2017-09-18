@@ -36,7 +36,7 @@ export class GameService {
     this.waitingTeams.push({name});
 
     // Add name to already quickchoose list
-    if(this.lastTeamNames.indexOf(name)===-1){
+    if (this.lastTeamNames.indexOf(name) === -1) {
       this.lastTeamNames.unshift(name);
     }
   }
@@ -44,12 +44,16 @@ export class GameService {
   handleTeamWon(team: Team) {
     for (let i = 0; i < this.activeTeams.length; i++) {
       if (this.activeTeams[i] !== team) {
-        this.activeTeams[i] = this.waitingTeams.shift();
+        this.activeTeams[i] = this.nextTeam();
       }
     }
   }
 
-  getLastTeamNames(){
+  getLastTeamNames() {
     return this.lastTeamNames;
+  }
+
+  nextTeam() {
+    return this.waitingTeams.shift();
   }
 }

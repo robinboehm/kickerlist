@@ -1,8 +1,9 @@
 <table class="table table-striped" style="font-size: 3vw">
   <tbody>
-  <tr *ngFor="let team of waitingTeams;let i = index">
+  <tr *ngFor="let team of waitingTeams;let i = index;let isFirst = first" [class.table-success]="isFirst">
     <td scope="row">{{i+1}}</td>
     <td>{{team.name}}</td>
+    <td (click)="removeTeam(i)"><button class="btn btn-danger">X</button></td>
   </tr>
   </tbody>
 </table>

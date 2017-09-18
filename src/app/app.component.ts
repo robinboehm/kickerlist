@@ -32,4 +32,8 @@ export class AppComponent implements OnInit {
     this.name = name;
   }
 
+  nextTeam(){
+    this.game.nextTeam();
+  }
+
 }
