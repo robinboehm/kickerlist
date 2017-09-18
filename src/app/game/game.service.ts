@@ -4,11 +4,11 @@ import {Team} from "../team";
 @Injectable()
 export class GameService {
 
-  private activeTeams: Team[] = [
+  activeTeams: Team[] = [
     {name: 'Andreas W. & Martin Y.'},
     {name: 'Christina & Max'}
   ];
-  private waitingTeams: Team[] = [
+  waitingTeams: Team[] = [
     {name: 'Moritz & Andre'},
     {name: 'Mira & Leo'},
     {name: 'Mocki & Andreas'},
@@ -16,7 +16,7 @@ export class GameService {
     {name: 'Thorsten & Flo'},
   ];
 
-  private lastTeamNames: string[] = [
+  lastTeamNames: string[] = [
     'Moritz & Andre',
     'Mira & Leo',
     'Mocki & Andreas',
